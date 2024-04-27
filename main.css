@@ -1,0 +1,336 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+.body, ul {
+    margin: 0;
+    padding: 0;
+}
+.body--colored {
+    background: #F8F8F8;
+}
+
+.upper-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.upper-menu--white {
+    background-color: white;
+    height: 88px;
+}
+
+.upper-menu--shadow {
+box-shadow: 0px 1px #D9FFF5;
+}
+
+.upper-menu__button {
+    background-color:  rgba(0, 0, 0, 0);
+    border: none;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    height: 40px;
+    width: 40px;
+}
+
+
+.button__text {
+    font-size: 0;
+}
+.burger {
+    background-image: url("burger.svg");
+}
+.call {
+    background-image: url("call.svg")
+}
+.chat {
+    background-image: url("chat.svg");
+}
+.profile {
+    background-image: url("profile.svg");
+}
+.repair {
+    background-image: url("repair.svg");
+}
+.divider {
+    background-image: url("divider.svg");
+    height: 32px;
+    width: 2px;
+}
+.check {
+    background-image: url("checkstatus.svg");
+}
+.group {
+    background-image: url("Group.svg");
+    background-size: cover;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    width: 96.55px;
+    height: 50.81px;
+}
+.upper-menu__button:focus {
+    outline: none;
+    border: 3px solid #B8FFEC;
+    border-radius: 6px; 
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.page-title {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: auto;
+}
+.page-title::before {
+    content: url(highlight.svg);
+}
+.page-title__text {
+    margin-left: 5vw;
+    vertical-align: top;
+    font-family: TT Lakes;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6000000238418579px;
+    font-weight: 900;
+}
+
+.slide-menu {
+    margin-left: 5vw;
+    margin-top: 8px;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.slide-menu::-webkit-scrollbar {
+     display: none; 
+}
+.slide-menu__item {
+    list-style-type: none;
+}
+.slide-menu__text {
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    text-decoration: none;
+    padding-top: 8px;
+    padding-right: 13px;
+    padding-bottom: 8px;
+    padding-left: 13px;
+    
+}
+.slide-menu__item {
+    scroll-snap-align: start;
+}
+
+.slide-menu__text:focus,
+.read-more:focus,
+.button:focus {
+    outline: none;
+    border: 3px solid #B8FFEC;
+    border-radius: 6px;
+    background: white;
+}
+
+.slide-menu__text:active,
+.slide-menu__text:visited {
+    color: inherit;
+}
+.text-block {
+    width: 100%;
+}
+.text-block__text {
+    margin-left: 5vw;
+    height: auto;
+    margin-left: 5vw;
+    font-family: TT Lakes;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    margin-top: 16px;
+}
+.read-more {
+    min-width: 100px;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: none;
+    margin: 16px;
+    margin-top: 0px;
+    
+}
+.read-more__text{
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    padding-left: 18px;
+    font-weight: 700;
+    color: #1B1C21;
+}
+
+
+
+@font-face {
+    font-family: TT Lakes;
+    src: url("TTLakes/TTLakes-Regular.ttf");
+    
+}
+@media (max-width: 767px) {
+    .xs-hidden {
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+
+    .md-hidden {
+        display: none;
+    }
+    .page-title__text,
+    .slide-menu,
+    .text-block__text {
+        margin-left: 3.125vw;
+    }
+    .main-container {
+        display: flex;
+        align-items: flex-end;
+
+    }
+    .text-block {
+        flex: 0 0 45%;
+        max-width: 50%;
+
+    }
+    .picture {
+        flex: 0 0 43%;
+        max-width: 50%;
+        border-radius: 5px;
+        margin-right: 25px;
+    }
+    .upper-menu {
+       justify-content: space-between;
+    }
+    .burger {
+        margin-left: 24px;
+        margin-right: 20px;
+    }
+    .group {
+        margin-left: 20px;
+    }
+    .call {
+         margin-left: 250.73px;
+    }
+    .chat {
+        margin-left: 16px;
+    }
+    .profile {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .repair {
+        margin-left: 16px;
+    }
+    .check {
+        margin-right: 24px;
+        margin-left: 16px;
+    }
+    
+    .text-block__text {
+        line-height: 20px;
+        margin-right: 28px;
+    }
+}
+
+@media (min-width: 1120px)  {
+
+.lg-hidden {
+    display: none;
+}
+.page-title__text,
+    .slide-menu,
+    .text-block__text {
+        margin-left: 3.125vw;
+}
+.header-flex {
+    display: flex;
+}
+.page-title {
+    order: -3;
+    flex: 0 0 50%;
+    max-width: 50%; 
+}
+.upper-menu {
+    order: -2;
+    flex: 0 0 50%;
+    max-width: 50%;
+    background: #F8F8F8;
+    box-shadow: none;
+    margin-right: 32px;
+    height: 60px;
+    align-items: end;
+}
+
+.slide-menu {
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+.slide-menu__text {
+    padding-left: 23px;
+    padding-right: 23px;
+}
+.review {
+    margin-top: 20px;
+}
+.button__text {
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    padding-right: 8px;
+    padding-left: 8px;
+    font-weight: 600;
+}
+.button__label {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: 10%;
+}
+.main-container {
+    display: flex;
+}
+.text-block {
+    flex: 0 0 45%;
+    max-width: 50%;
+    display: inline-block;
+
+}
+.picture {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: inline-block;
+    margin-right: 28.65px;
+}
+.text-block__text {
+    line-height: 20px;
+    margin-right: 36px;
+}
+}

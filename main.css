@@ -266,21 +266,22 @@ box-shadow: 0px 1px #D9FFF5;
 }
 .header-flex {
     display: flex;
+    justify-content: space-between;
 }
 .page-title {
     order: -3;
-    flex: 0 0 50%;
     max-width: 50%; 
 }
 .upper-menu {
     order: -2;
-    flex: 0 0 50%;
-    max-width: 50%;
+    width: auto;
     background: #F8F8F8;
     box-shadow: none;
-    margin-right: 32px;
     height: 60px;
     align-items: end;
+    display: flex;
+    gap: 32px;
+    margin-right: 32px;
 }
 
 .slide-menu {
@@ -308,7 +309,6 @@ box-shadow: 0px 1px #D9FFF5;
     display: flex;
     align-items: center;
     align-content: center;
-    margin-left: 10%;
 }
 .main-container {
     display: flex;

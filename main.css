@@ -296,8 +296,8 @@ box-shadow: 0px 1px #D9FFF5;
     padding-left: 23px;
     padding-right: 23px;
 }
-.review {
-    margin-top: 20px;
+.slide-menu__item {
+    margin-bottom: 20px;
 }
 .button__text {
     font-family: TT Lakes;

@@ -281,9 +281,11 @@ html {
     max-width: 50%; 
     margin-left: 32px;
 }
+
 .header__title::before {
     left: -32px;
 }
+
 .upper-menu {
     order: -2;
     width: auto;

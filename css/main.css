@@ -267,11 +267,10 @@ html {
 .lg-hidden {
     display: none;
 }
-.header__tittle,
-    .navigation__slide-menu,
-    .text-block__text,
-    .text-block__read-more {
-        margin-left: 32px;
+.navigation__slide-menu,
+.text-block__text,
+.text-block__read-more {
+    margin-left: 32px;
 }
 .header {
     display: flex;
@@ -280,6 +279,7 @@ html {
 .header__title {
     order: -3;
     max-width: 50%; 
+    margin-left: 32px;
 }
 .header__title::before {
     left: -32px;

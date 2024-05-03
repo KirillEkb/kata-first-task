@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
 <body class="body body--colored">
     
         
-        <div class="header-flex">
-        <header class="upper-menu upper-menu--shadow upper-menu--white">
-                    <button class="upper-menu__button burger lg-hidden"></button>
-                    <div class="divider xs-hidden lg-hidden"></div>
-                    <div class="group lg-hidden"></div>
-                    <button class="upper-menu__button call xs-hidden lg-hidden"></button>
-                    <button class="upper-menu__button chat xs-hidden lg-hidden "></button>
-                    <button class="upper-menu__button profile xs-hidden lg-hidden"></button>
-                    <div class="divider  lg-hidden"></div>
-                    <label class="button__label"><span class="button__text">Оставить заявку</span><button class="upper-menu__button repair"></button></label>  
-                    <label class="button__label"><span class="button__text">Статус ремонта</span><button class="upper-menu__button check"></button></label> 
-        </header>        
-        <h1 class="page-title"><span class="page-title__text">Услуги и сервисы</span></h1>
-        </div>
+        <header class="header body__header">
+        <div class="upper-menu upper-menu--shadow">
+                    <button class="upper-menu__button upper-menu__burger burger lg-hidden"></button>
+                    <div class="upper-menu__divider divider xs-hidden lg-hidden"></div>
+                    <div class="upper-menu__group group lg-hidden"><img src="images/Group.svg" alt="CPS"></div>
+                    <button class="upper-menu__button upper-menu__call call xs-hidden lg-hidden"></button>
+                    <button class="upper-menu__button upper-menu__chat chat xs-hidden lg-hidden "></button>
+                    <button class="upper-menu__button upper-menu__profile profile xs-hidden lg-hidden"></button>
+                    <div class="upper-menu__divider divider  lg-hidden"></div>
+                    <label class="upper-menu__label"><span class="upper-menu__text">Оставить заявку</span><button class="upper-menu__button upper-menu__repair repair"></button></label>  
+                    <label class="upper-menu__label"><span class="upper-menu__text">Статус ремонта</span><button class="upper-menu__button upper-menu__check check"></button></label> 
+        </div>        
+        <h1 class="title header__title">Услуги и сервисы</h1>
+        </header>
 
-        <main class="main">  
-
-
+        <main class="main body__main">  
             <nav class="navigation">
-                <ul class="slide-menu">
+                <ul class="slide-menu navigation__slide-menu">
                     <li class="slide-menu__item"><a href="#" class="slide-menu__text">Ремонтируемые бренды</a></li>
                     <li class="slide-menu__item"><a href="#" class="slide-menu__text">Ремонтируемые устройства</a></li>
                     <li class="slide-menu__item"><a href="#" class="slide-menu__text">Цены на услуги</a></li>
@@ -41,17 +39,17 @@
 
         
             <div class="main-container">
-            <article class="text-block">
+            <article class="text-block main-container__text-block">
                     <p class="text-block__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
                     </p>
                     <br>
                     <p class="text-block__text xs-hidden">
                     Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="md-hidden">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
                     </p>
-                    <button class="read-more"><span class="read-more__text">Читать далее</span>
+                    <button class="read-more text-block__read-more"><span class="read-more__text">Читать далее</span>
                     </button> 
             </article>   
-            <img class="picture"  src="Picture.png" alt="" width="100%">
+            <img class="picture main-container__picture"  src="images/Picture.png" alt="табличка CPS" width="100%">
             </div>
         </main>    
   

@@ -72,8 +72,8 @@ html {
 }
 .icon-button:focus {
     outline: none;
-    border: 3px solid #B8FFEC;
-    border-radius: 6px; 
+    box-shadow: 0px 0px 3px 3px #B8FFEC;
+    border-radius: 2px;
 }
 .main {
     display: flex;
@@ -132,14 +132,15 @@ html {
     padding-top: 8px;
     padding-right: 13px;
     padding-bottom: 8px;
-    padding-left: 13px;
+    padding-left: 10px;
+    margin-left: 3px;
 }
 
 .slide-menu__text:focus,
-.read-more:focus,
+.show-more:focus,
 .button:focus {
     outline: none;
-    border: 3px solid #B8FFEC;
+    box-shadow: 0px 0px 3px 3px #B8FFEC;
     border-radius: 6px;
     background: white;
 }
@@ -163,15 +164,15 @@ html {
     margin-top: 16px;
     margin-bottom: 0px ;
 }
-.read-more {
+.show-more {
     border: 0;
     background: none;
 }
-.text-block__read-more{
+.text-block__show-more{
     margin-left: 5vw;
     margin-bottom: 16px;
 }
-.read-more__text{
+.show-more__text{
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
@@ -179,7 +180,7 @@ html {
     font-weight: 700;
     color: #1B1C21;
 }
-.read-more::before {
+.show-more::before {
     content: url("../images/expand.svg");
     vertical-align: middle;
 }
@@ -203,7 +204,7 @@ html {
     .header__title,
     .navigation__slide-menu,
     .text-block__text,
-    .text-block__read-more {
+    .text-block__show-more {
         margin-left: 3.125vw;
     }
     .header__title::before {
@@ -218,7 +219,7 @@ html {
         max-width: 50%;
 
     }
-    .text-block__read-more {
+    .text-block__show-more {
         margin-top: 10px;
     }
     .main-container__picture {
@@ -269,7 +270,7 @@ html {
 }
 .navigation__slide-menu,
 .text-block__text,
-.text-block__read-more {
+.text-block__show-more {
     margin-left: 32px;
 }
 .header {
@@ -309,7 +310,7 @@ html {
     margin-bottom: 20px;
 }
 .slide-menu__text {
-    padding-left: 23px;
+    padding-left: 20px;
     padding-right: 23px;
 }
 .upper-menu__text {
@@ -334,7 +335,7 @@ html {
     max-width: 50%;
 
 }
-.text-block__read-more {
+.text-block__show-more {
     margin-top: 16px;
 }
 

@@ -1,0 +1,454 @@
+@font-face {
+  font-family: TT Lakes;
+  src: url("../fonts/TTLakes/TTLakes-Regular.ttf");
+}
+
+$body-color: #F8F8F8;
+$white: 	rgba(255, 255, 255, 1);
+$menu-shadow: #D9FFF5;
+$divider: #EAEAEA;
+$transparent: rgba(0, 0, 0, 0);
+$focus: #B8FFEC;
+$text: #1B1C21;
+$link: #7E7E82;
+$pink:#FF3E79;
+$gray-text:#7E7E82;
+$gray-modal-text:#B5B6BC;
+
+
+%focus {
+  outline: none;
+  box-shadow: 0px 0px 3px 3px $focus;
+  border-radius: 6px;
+}
+%hover-link {
+  color: $pink;
+}
+
+%font-menu {
+  color: $text;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+}
+
+$screen-xs: 0;
+$screen-md: 768px;
+$screen-lg: 1366px;
+
+
+
+html {
+    box-sizing: border-box;
+    font-family: TT Lakes;
+  }
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  &--colored {
+    background: $body-color;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @media (min-width: $screen-lg)  {
+      width: 1120px;
+    }
+  }
+  &__header {
+    @media (min-width: $screen-lg)  {
+      display: flex;
+      justify-content: space-between;
+      width: 1120px;
+    }
+  }
+  &-layer {
+    @media (min-width: $screen-lg)  {
+    display: flex;
+    @media (min-width:1450px) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  }
+}
+
+a:hover {
+  @extend %hover-link;
+}
+
+.upper-menu {
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--shadow {
+      background-color: $white;
+      height: 88px;
+      box-shadow: 0px 1px $menu-shadow;
+    }
+
+    @media (min-width: $screen-md) {
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+    @media (min-width: $screen-lg)  {
+      order: -2;
+      width: auto;
+      background-color: $body-color;
+      box-shadow: none;
+      height: 60px;
+      align-items: flex-end;
+      display: flex;
+      gap: 32px;
+      padding: 0 24px;
+    }
+
+    &__text {
+      font-size: 0;
+
+      @media (min-width: $screen-lg)  {
+        font-family: TT Lakes;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.20000000298023224px;
+        padding-right: 8px;
+        padding-left: 8px;
+        font-weight: 600;
+      }
+    }
+    &__divider {
+      margin: 0 16px;
+      @media (min-width: $screen-md) {
+        margin: 0 20px;
+      }
+
+    }
+    &__call {
+      @media (min-width: $screen-md) {
+        margin-left: 250.73px;
+      }
+    }
+
+    &__chat {
+      @media (min-width: $screen-md) {
+        margin-left: 16px;
+      }
+    }
+
+    &__profile {
+      @media (min-width: $screen-md) {
+        margin-left: 16px;
+
+      }
+    }
+
+
+
+    &__check {
+      @media (min-width: $screen-md) {
+
+        margin-left: 16px;
+      }
+      @media (min-width: $screen-lg)  {
+        margin-right: 32px;
+      }
+    }
+
+    &__label {
+      @media (min-width: $screen-lg)  {
+        display: flex;
+        align-items: center;
+        align-content: center;
+      }
+    }
+}
+
+.icon-button {
+    background-color: $transparent;
+    border: none;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+
+    &:focus {
+      @extend %focus;
+      border-radius: 50%;
+      transform: scale(1.2);
+  }
+  &:hover {
+  filter:  saturate(20%);
+  transition: filter 0.2s ease;
+}
+}
+
+
+
+.burger {
+    background-image: url("../img/burger.svg");
+}
+.call {
+    background-image: url("../img/call.svg")
+}
+.chat {
+    background-image: url("../img/chat.svg");
+}
+.profile {
+    background-image: url("../img/profile.svg");
+}
+.repair {
+    background-image: url("../img/repair.svg");
+}
+.divider {
+    background-color: $divider;
+    height: 32px;
+    width: 2px;
+}
+.check {
+    background-image: url("../img/checkstatus.svg");
+}
+.group {
+
+    width: 96.55px;
+    height: 50.81px;
+}
+
+
+.main-container {
+  @media (min-width: $screen-md) {
+  display: flex;
+  align-items: flex-end;
+  }
+  &__picture {
+    @media (min-width: $screen-md) {
+    flex: 1 1 43%;
+    max-width: 50%;
+    border-radius: 5px;
+    margin-right: 25px;
+    align-self: center;
+    }
+    @media (min-width: $screen-lg)  {
+      flex: 1 1 50%;
+      margin-right: 28.65px;
+      border-radius: 5px;
+    }
+  }
+  &__text-block {
+    padding: 0 16px;
+    @media (min-width: $screen-md) {
+      padding-left: 3.125vw;
+
+    }
+    @media (min-width: $screen-lg) {
+      padding-left: 32px;
+      flex: 0 0 45%;
+      max-width: 40%;
+    }
+
+  }
+}
+
+.header__title {
+  position: relative;
+  width: 100%;
+  vertical-align: top;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6000000238418579px;
+  font-weight: 900;
+  margin-top: 24px;
+  margin-bottom: auto;
+  margin-left: 5vw;
+
+  &::before {
+    position: absolute;
+    content: url(../img/highlight.svg);
+    left:-5vw;
+    top:0;
+  }
+
+  @media (min-width: $screen-md) {
+    margin-left: 3.125vw;
+    display: flex;
+    align-items: flex-end;
+    &::before {
+      left: -3.125vw;
+  }
+  }
+  @media (min-width: $screen-lg)  {
+  order: -3;
+  max-width: 50%;
+  margin-left: 32px;
+  &::before {
+    left: -32px;
+  }
+  }
+}
+
+.slide-menu {
+    display: flex;
+    white-space: nowrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+
+    &__item {
+      list-style-type: none;
+      scroll-snap-align: start;
+
+      @media (min-width: $screen-lg)  {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__text {
+      color: $link;
+      text-align: left;
+      text-decoration: none;
+      padding-top: 8px;
+      padding-right: 13px;
+      padding-bottom: 8px;
+      padding-left: 10px;
+      margin-left: 3px;
+
+      @media (min-width: $screen-lg)  {
+        padding-left: 20px;
+        padding-right: 23px;
+      }
+      &:focus {
+        @extend %focus;
+    }
+  }
+}
+
+.navigation__slide-menu {
+    margin-left: 5vw;
+    margin-top: 8px;
+
+    @media (min-width: $screen-md) {
+      margin-left: 3.125vw;
+    }
+    @media (min-width: $screen-lg)  {
+      margin-left: 32px;
+      max-width: 100%;
+      flex-wrap: wrap;
+      margin-top: 0;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}
+
+
+
+.text-block {
+    width: 100%;
+
+    &__text {
+      height: auto;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: left;
+      &--move {
+        display: none;
+      }
+
+      @media (min-width: $screen-md) {
+        line-height: 20px;
+        margin-right: 28px;
+      }
+
+      @media (min-width: $screen-lg)  {
+        line-height: 20px;
+        margin-right: 36px;
+      }
+  }
+
+  &__show-more{
+    position: relative;
+    padding: 3px 30px;
+    margin-bottom: 5px;
+    text-wrap: nowrap;
+    text-align: right;
+    @extend %font-menu;
+      font-weight: 700;
+      color: $text;
+
+
+    @media (min-width: $screen-md) {
+      margin-top: 10px;
+    }
+    @media (min-width: $screen-lg)  {
+      margin-top: 16px;
+    }
+  }
+
+}
+
+.show-more {
+    border: 0;
+    background: none;
+
+  &:focus {
+    @extend %focus;
+  }
+  &:hover {
+    color: $pink;
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+  }
+  &::before {
+    content: url("../img/expand.svg");
+    position: absolute;
+    transition-duration: 0.2s;
+    transform-origin: 50% 40%;
+    left: -5px;
+  }
+  &--close::before {
+    content: url("../img/expand.svg");
+    transform: rotate(180deg);
+    transition-duration: 0.2s;
+    position: absolute;
+    left: -5px;
+  }
+}
+
+
+.xs-hidden {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+.md-hidden {
+  @media (min-width:$screen-md) and (max-width: 1365px) {
+  display: none;
+  }
+}
+.lg-hidden {
+  @media (min-width: $screen-lg)  {
+    display: none;
+  }
+}
+
+

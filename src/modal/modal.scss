@@ -1,0 +1,153 @@
+.body__modal {
+  background-color: $white;
+  position: absolute;
+  overflow: scroll;
+  scrollbar-width: none;
+  border: none;
+
+  @media (min-width: 760px) {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @media (min-width: $screen-md) {
+    width: 320px;
+    height: 676px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 513px;
+    background-color: $transparent;
+    min-height: 100%;
+    margin: 0;
+    left: calc(100vw - 513px);
+    padding: 0;
+  }
+}
+
+.modal {
+  &__layer {
+    @media (min-width: $screen-lg) {
+      width: 440px;
+      min-height: 100%;
+      padding: 32px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      box-shadow: -1px 0px $focus;
+      background-color: #fff;
+    }
+  }
+  &__form {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  &__close {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-lg) {
+      position: absolute;
+      top: 32px;
+      left: 5px
+    }
+  }
+  &__title {
+    font-weight: 900;
+
+    @media (min-width:$screen-lg) {
+      margin-top: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: url(../img/highlight.svg);
+      left: 0px;
+    }
+  }
+  &__label--hide {
+    font-size: 0;
+  }
+  &__text-link {
+    color: $pink;
+    text-decoration: none;
+
+    &:focus {
+      color: $focus;
+      outline: none;
+  }
+
+    &:hover {
+      color: $focus;
+    }
+  }
+
+  &::backdrop {
+    background: rgba(248, 248, 248, 0.8);
+    filter: blur(15);
+  }
+  &__input {
+    margin: 0;
+    margin-bottom: 16px;
+    border-color: $divider;
+    border-radius: 5px;
+    color: $gray-modal-text;
+    height: 48px;
+    width: 100%;
+    padding-left: 16px;
+    border-style:solid;
+
+    @media (min-width:$screen-lg) {
+      width: 376px;
+
+    }
+
+    &:focus {
+      @extend %focus;
+  }
+
+  }
+  &__textarea{
+    border-color: $divider;
+    border-radius: 5px;
+    color: $gray-modal-text;
+    padding: 16px;
+    width: 100%;
+
+    @media (min-width: $screen-lg) {
+      width: 376px;
+    }
+    &:focus {
+      @extend %focus;
+  }
+  }
+  &__submit {
+    width: 136px;
+    background: url('../img/dropdown.svg') $pink;
+    background-position: 90%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: none;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15000000596046448px;
+    color: $white;
+    padding: 5px 10px;
+    align-self: flex-end;
+    &:focus {
+      @extend %focus;
+      border-radius: 10px;
+    }
+  }
+  &__bottom-text {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+  }
+}
+
+.scroll-lock {
+  overflow: hidden;
+}

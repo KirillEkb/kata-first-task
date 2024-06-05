@@ -1,0 +1,41 @@
+.body__footer {
+  height: 161px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  justify-content:space-around ;
+  align-items:center;
+  box-shadow: inset 0px 2px $menu-shadow ;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+    flex-direction: row;
+  }
+}
+
+.footer__link {
+  text-decoration: none;
+  text-align: center;
+  color: $link;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width:$screen-md) {
+    width: 218px;
+}
+  &:focus{
+    outline: none;
+    color: $pink;
+    font-weight: 400;
+  }
+  &-1 {
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
+  }
+  &-3 {
+    @media (min-width: $screen-md) {
+      text-align: right;
+    }
+  }
+}

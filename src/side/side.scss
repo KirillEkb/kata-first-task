@@ -1,0 +1,137 @@
+
+.side {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+
+  &__container {
+    position: absolute;
+    min-height: 100%;
+    box-shadow: 6px 0 10px -5px $gray-text;
+    background-color: $white;
+    @media (max-width: 767px) {
+      min-width: 100vw;
+    }
+    @media(max-width: 1365px) {
+      transform: translateX(-110%);
+      transition-duration: 0.6s;
+      max-width: 320px;
+    }
+    @media (min-width: $screen-lg) {
+      width: auto;
+      position: static;
+      box-shadow: none;
+    }
+    &--move {
+      @media (max-width: 1365px) {
+        transform: translateX(0px);
+        transition-duration: 0.2s;
+      }
+    }
+  }
+
+  &__side-header {
+    height: 88px;
+    align-items: center;
+    display: flex;
+    padding: 0px 24px;
+    margin-bottom: 32px;
+    justify-content: space-between;
+  }
+
+  &__text {
+  @extend %font-menu;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  &:focus{
+    outline: none;
+    color: $gray-text;
+    font-weight: 400;
+  }
+  }
+  &__footer {
+  margin-top: 228px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  }
+}
+
+.side-header {
+  &__close {
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+  &__group {
+    transform: translateX(-33px);
+    @media (min-width: $screen-lg) {
+      transform: none;
+    }
+  }
+}
+.close {
+  background-image: url("../img/close.svg");
+}
+.menu {
+  &__link {
+    line-height: 40px;
+    padding: 10px 15px;
+    vertical-align: bottom;
+    &:focus::before {
+      position: absolute;
+      content: url(../img/highlight.svg);
+      left: 0;
+  }
+  }
+
+  &__item {
+  padding-left: 9px;
+  padding-right: 15px;
+  padding-bottom: 16px;
+  }
+
+}
+
+
+.footer {
+  &__mail {
+    width: 320px;
+  }
+  &__tel {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6000000238418579px;
+    text-align: left;
+    font-weight: 900;
+  }
+  &__language-block {
+  margin-bottom: 32px;
+  }
+  &__button-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+}
+
+
+
+.language-block {
+  display: flex;
+  &__button {
+    padding: 0 3px;
+    border: none;
+    background-color: $transparent;
+  }
+  &__button--active{
+    color: $gray-text;
+    font-weight: 400;
+  }
+}
+
+

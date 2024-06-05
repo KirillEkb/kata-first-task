@@ -1,0 +1,226 @@
+.body__price-list {
+  background-color: $body-color;
+
+    @media (min-width: $screen-md) {
+      max-width: 768px;
+    }
+    @media (min-width: $screen-lg) {
+      max-width: 1120px;
+    }
+}
+
+.price-list {
+  &__header {
+    height: 56px;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(to right, $body-color, $white);
+    box-shadow: inset 0px 2px $menu-shadow;
+    @extend %font-menu;
+    color: $gray-text;
+
+    @media (min-width: $screen-md) {
+        padding-left: 24px;
+      margin-bottom: 16px;
+    }
+
+  }
+  &__swiper {
+  background-color: $body-color;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+  }
+  }
+  &__operations {
+  border-collapse: collapse;
+  font-size: 14px;
+
+  @media (max-width: 767px) {
+    padding: 16px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 320px;
+  }
+  @media (min-width: $screen-md) {
+    display: table;
+    width: 100%;
+    position: relative;
+    margin-top: 60px;
+  }
+  }
+  &__button {
+    width: 119px;
+    height: 32px;
+    background: url('../img/dropdown.svg') $pink;
+    background-position: 90%;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    border: none;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15000000596046448px;
+    color: $white;
+    padding: 5px 10px;
+    text-align: left;
+
+    @media (max-width: 767px) {
+    position: absolute;
+    bottom: 30%;
+    right: 16px;
+    }
+    @media (min-width: $screen-md) {
+      display: table-cell;
+      margin-right: 16px;
+    }
+    &:focus {
+      @extend %focus;
+      border-radius: 16px;
+      transform: scale(1.1);
+    }
+    &:hover {
+      filter:  saturate(20%);
+      transition: filter 0.2s ease;
+    }
+  }
+  &__bottom-text {
+    font-size: 14px;
+    color: $text;
+    line-height: 20px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    padding: 16px;
+
+    @media (min-width: $screen-md) {
+    padding: 24px;
+    width: 445px;
+    }
+
+  }
+  &__link {
+    text-decoration: none;
+    @extend %font-menu;
+    text-align: left;
+    font-weight: 700;
+    background: url('../img/Line.svg');
+    background-position: 40% 85%;
+    background-repeat: no-repeat;
+    padding-left: 16px;
+    padding-right: 112px;
+    display: block;
+
+    @media (min-width: $screen-md) {
+      background-position: 42%;
+      padding-left: 24px;
+      background-position: 30% 50%;
+    }
+
+    &:focus{
+      outline: none;
+      color: $pink;
+      font-weight: 400;
+  }
+  }
+}
+
+.operations {
+  &__kind {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+
+    @media (min-width: $screen-md) {
+      padding: 16px;
+      display: table-row;
+      height: auto;
+    }
+  }
+  &__td {
+    @media (max-width: 767px) {
+    padding: 16px;
+    &--service{
+      position: relative;
+      &::before{
+        content: 'Ремонтные услуги';
+        color: $gray-text;
+        border: none;
+        text-align: left;
+        position: absolute;
+        top:0
+      }
+    }
+    &--price{
+      position: relative;
+      &::before{
+        content: 'Цена';
+        color: $gray-text;
+        border: none;
+        text-align: left;
+        position: absolute;
+        top: 0px;
+      }
+    }
+    &--time{
+      position: relative;
+
+      &::before{
+        content: 'Срок';
+        color: $gray-text;
+        border: none;
+        text-align: left;
+        position: absolute;
+        top:0px;
+      }
+    }
+    }
+
+    @media (min-width: $screen-md) {
+    border-bottom: 2px solid $divider;
+    display: table-cell;
+    padding: 16px;
+    padding-right: 0;
+
+    &--service{
+      &::before{
+        content: 'Ремонтные услуги';
+        color: $gray-text;
+        border: none;
+        text-align: left;
+        position: absolute;
+        top:-35px;
+      }
+    }
+    &--price{
+        &::before{
+        content: 'Цена';
+        color: $gray-text;
+        border: none;
+        text-align: left;
+        position: absolute;
+        top: -35px;
+      }
+    }
+    &--time{
+      display: flex;
+      justify-content: space-between;
+      &::before{
+        content: 'Срок';
+        color: $gray-text;
+        border: none;
+        text-align: left;
+        position: absolute;
+        top: -35px;
+      }
+    }
+    }
+  }
+}
+
+
+
+
+

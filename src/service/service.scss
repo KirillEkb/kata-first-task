@@ -1,0 +1,100 @@
+.body__service {
+  @media (min-width: $screen-md) {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $screen-lg) {
+    max-width: 1120px;
+  }
+}
+.service {
+  &__header {
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(to right, $body-color, $white);
+    box-shadow: inset 0px 2px $menu-shadow ;
+    @extend %font-menu;
+    color: $gray-text;
+    padding: 16px;
+    padding-left: 16px;
+    margin-bottom: 16px;
+  }
+  &__brands {
+  @media (max-width: 767px) {
+         width: 320px;
+        padding-left: 16px;
+        padding-bottom: 10px;
+  }
+
+  @media (min-width: $screen-md) {
+          display: flex;
+          flex-wrap: wrap;
+  }
+  }
+  &__button {
+    @extend %font-menu;
+
+    @media (min-width: $screen-md) {
+      margin-left: 24px;
+      text-align: left;
+      position: relative;
+      padding: 10px 25px;
+      font-weight: 700;
+      text-align: left;
+      color: $text;
+
+      &::before {
+        position: absolute;
+        left:-5px;
+      }
+
+      &--close::before {
+          content: url("../img/expand.svg");
+          transform: rotate(180deg);
+          position: absolute;
+          left:-5px;
+      }
+    }
+  }
+}
+
+.brands {
+  &__element {
+    height: 72px;
+    background:url("../img/go.svg") $white;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: 90%;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 0px;
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      width: 224px;
+      margin-left: 24px;
+  }
+  @media (min-width: $screen-lg) {
+    width: 240px;
+  }
+    &:focus {
+      @extend %focus;
+  }
+  }
+
+  &__pic {
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+  }
+}
+
+
+
+
+
+
+
+
+

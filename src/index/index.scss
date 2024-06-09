@@ -409,6 +409,7 @@ a:hover {
 .show-more {
     border: 0;
     background: none;
+    margin-bottom: 20px;
 
   &:focus {
     @extend %focus;

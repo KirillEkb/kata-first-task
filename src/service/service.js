@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import '../scss/style.scss';
 export const service = document.querySelector('.service');
 export const buttonOpen = service.querySelector('.service__button');
 export const mdHiddenList = service.querySelectorAll('.md-hidden');
@@ -8,7 +9,7 @@ export let swiper;
 
 if (window.matchMedia("(max-width: 767px)").matches) {
   swiper = new Swiper('.swiper', {
-    modules: [ Navigation, Pagination ],
+    modules: [ Navigation,Pagination ],
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1.3125,

@@ -65,13 +65,11 @@
     color: $white;
     padding: 5px 10px;
     text-align: left;
-
-    @media (max-width: 767px) {
     position: absolute;
-    bottom: 30%;
-    right: 16px;
-    }
+    right: 0;
+    bottom: 0;
     @media (min-width: $screen-md) {
+      position: static;
       display: table-cell;
       margin-right: 16px;
     }
@@ -105,16 +103,16 @@
     text-align: left;
     font-weight: 700;
     background: url('../img/Line.svg');
-    background-position: 40% 85%;
+    background-position: 60% 85%;
     background-repeat: no-repeat;
-    padding-left: 16px;
-    padding-right: 112px;
+    margin-left: 16px;
     display: block;
+    width: 193px;
 
     @media (min-width: $screen-md) {
-      background-position: 42%;
-      padding-left: 24px;
-      background-position: 30% 50%;
+      margin-left: 24px;
+      background-position: 95% 50%;
+      width: 316px;
     }
 
     &:focus{
@@ -132,16 +130,18 @@
     flex-direction: column;
     justify-content: space-between;
     height: 200px;
+    padding: 16px;
+
 
     @media (min-width: $screen-md) {
-      padding: 16px;
       display: table-row;
+      position: static;
       height: auto;
     }
   }
   &__td {
     @media (max-width: 767px) {
-    padding: 16px;
+      padding-top: 16px;
     &--service{
       position: relative;
       &::before{
